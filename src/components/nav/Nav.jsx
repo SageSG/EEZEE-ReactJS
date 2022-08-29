@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function Nav() {
   return (
     <section id="Nav">
-      <div className="flex w-screen h-[38px] bg-[#EFEFF0] items-center">
+      <div className="flex w-full h-[38px] bg-[#EFEFF0] items-center">
         <div className="flex-none order-none grow-0">
           <div className="flex flex-row flex-wrap ml-[120px] w-[91px] h-[22px]">
             <img
@@ -30,11 +30,11 @@ function Nav() {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap w-screen h-[119px] border-b-[1px] border-[#D7D8DB] bg-[#FFFFFF]">
+      <div className="flex flex-wrap w-full h-[119px] border-b-[1px] border-[#D7D8DB] bg-[#FFFFFF]">
         <div className="flex flex-row w-full h-[80px] justify-between items-center mx-[120px]">
           <img src={Eezeelogo} className="w-[150px] h-[44px]" alt={''} />
           <div className="flex flex-col w-[40px] h-[60px] self-start items-center justify-center">
-            <div class="relative h-[40px] w-[40px] mt-[14px]">
+            <div className="relative h-[40px] w-[40px] mt-[14px]">
               <span className="absolute top-0 right-[-8px] w-[20px] h-[20px] rounded-[22px] bg-[#2A64DB] font-normal text-[12px] leading-[20px] text-[#FFFFFF] text-center top-[6px] font-roboto">
                 0
               </span>
