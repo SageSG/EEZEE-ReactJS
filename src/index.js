@@ -4,21 +4,39 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  Link
 } from "react-router-dom";
 import './index.css';
-import App from './App';
+import Homepage from './routes/Homepage';
+import Brands from './routes/Brands';
+import Products from './routes/Products';
+import Nav from './components/nav/Nav';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Suspense fallback={(<div></div>)}>
+    <Suspense fallback={(<div>Please wait...</div>)}>
       <BrowserRouter>
+      <Nav/>
       <Routes>
-        <Route path="/" element = {<App/>}/>
-        <Route path="brands" element = {<App/>}/>
-        <Route path="products" element = {<App/>}>
-        <Route path=":productid" element = {<App/>}/>
+        <Route exact path="/" element = {<Homepage/>}/>
+        <Route exact path="brands" element = {<Brands/>}/>
+        <Route exact path="products" element = {<Products/>}>
+        <Route exact path=":productid" element = {<Products/>}/>
         </Route>
+        <Route
+            path="*"
+            element={
+              <main className='p-8 bg-rose-200 h-screen'>
+                <div className='bg-rose-400 p-8'>
+                  <p className='font-bold text-white'>URL not found - 404 code</p>
+                  <p>
+                    Go Back to <u><Link to="/" className='font-bold'>Homepage</Link></u>
+                  </p>
+                </div>
+              </main>
+            }
+          />
       </Routes>
       </BrowserRouter>
     </Suspense>

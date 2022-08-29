@@ -1,8 +1,11 @@
 import React from 'react'
+import Nav from '../components/nav/Nav'
 
 function Homepage() {
   return (
-    <div>Homepage</div>
+    <main>
+        Homepage
+    </main>
   )
 }
 
