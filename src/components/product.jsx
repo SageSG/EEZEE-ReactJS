@@ -136,7 +136,7 @@ function ProductPage() {
             <span className="mx-[4px]">–</span>
           ) : null}
           <span className="self-start font-roboto font-bold text-[20px] leading-[28px] text-[#2A64DB] tracking-[0.3px]">
-            {productDetails.currencySymbol}
+            {productDetails.highPrice && productDetails.currencySymbol}
           </span>
           <span className="font-roboto font-medium text-[#2A64DB] text-[30px] leading-[38px]">
             {productDetails.highPrice && productDetails.highPrice.toFixed(2)}
