@@ -44,8 +44,7 @@ function ProductPage() {
       <div className="flex flex-row flex-wrap w-2/3 h-auto mt-[24px] p-[16px] bg-white space-y-[8px] self-start">
         <div className="flex flex-col w-full border-b-[1px]">
           <span className="font-roboto font-medium text-[24px] leading-[32px]">
-            Safety Jogger Safety Shoe Dakar S3 (if the seller input product name
-            is long)
+            {productDetails.title}
           </span>
           <div className="flex flex-row flex-nowrap w-full h-[56px] py-[4px]">
             <img
