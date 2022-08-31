@@ -5,6 +5,7 @@ Opportunity to internship at EEZEE.
 ## Project Status
 
 Created the 4 pages from Figma, some of the elements are in px and may convert to viewport width and length to increase responsiveness.
+Can add default css tags into index.css, such as the frequently used h1,h2,h3 tags. For now, its coded inline.
 
 ## Installation and Setup Instructions
 
