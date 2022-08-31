@@ -11,6 +11,8 @@ import Homepage from './routes/Homepage';
 import Brands from './routes/Brands';
 import Products from './routes/Products';
 import Nav from './components/nav/Nav';
+import ProductPage from './components/product';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,9 +23,9 @@ root.render(
       <Routes>
         <Route exact path="/" element = {<Homepage/>}/>
         <Route exact path="brands" element = {<Brands/>}/>
-        <Route exact path="products" element = {<Products/>}>
-        <Route exact path=":productid" element = {<Products/>}/>
-        </Route>
+        <Route exact path="products" element = {<Products/>}/>
+        <Route exact path="products/:productid" element = {<ProductPage/>}/>
+
         <Route
             path="*"
             element={

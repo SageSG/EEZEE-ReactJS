@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { AiOutlinePhone } from "react-icons/ai";
 import SGflag from "../../assets/vectors/singaporeflag.png";
 import Eezeelogo from "../../assets/vectors/eezeelogo.png";
@@ -7,6 +7,15 @@ import { Link, useNavigate } from "react-router-dom";
 
 function Nav() {
   let navigate = useNavigate();
+  const [sessionItems, setSessionItems] = useState(0)
+  useEffect(()=>{
+    let cartItems = sessionStorage.getItem("cartItems");
+    if(cartItems){
+      setSessionItems(cartItems)
+    }else{
+      setSessionItems(0)
+    }
+},[])
   return (
     <section id="Nav">
       <div className="flex w-full h-[38px] bg-[#EFEFF0] items-center">
@@ -37,7 +46,7 @@ function Nav() {
           <div className="flex flex-col w-[40px] h-[60px] self-start items-center justify-center">
             <div className="relative h-[40px] w-[40px] mt-[14px]">
               <span className="absolute top-0 right-[-8px] w-[20px] h-[20px] rounded-[22px] bg-[#2A64DB] font-normal text-[12px] leading-[20px] text-[#FFFFFF] text-center top-[6px] font-roboto">
-                0
+                {sessionItems}
               </span>
             </div>
             <img src={Carticon} className="w-[40px] h-[40px] mt-[14px]" alt={''}/>
