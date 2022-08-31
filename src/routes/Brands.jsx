@@ -5,7 +5,9 @@ import noImage from '../assets/vectors/noimage.png'
 
 function Brands() {
   const [brandsWidth, setBrandsWidth] = useState(0);
-  const alphabets = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','S','T','U','V','W','X','Y','Z']
+  // show all alphabets
+  // const alphabets = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','S','T','U','V','W','X','Y','Z']
+  const alphabets = ['A','B','C','D','E','H','I','L','M','N','S','T','V','W']
 
   function resizeProductsBox(){
     setBrandsWidth((document.getElementById("AllBrands").offsetWidth-41)/6)
@@ -54,12 +56,11 @@ useLayoutEffect(() => {
                   {brand.name}
                 </div>
                 <div className="flex h-1/5 w-full justify-center text-[12px] leading-[20px] font-normal font-roboto text-[#55585D]">
-                  {brand.productCount + " Products"}
+                  {(brand.productCount? brand.productCount : 'N.A') + " Products"}
                 </div>
               </div>
             );
           })}
-          {console.log(dataBrands)}
         </div>
       </div>
             )})}

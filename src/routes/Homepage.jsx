@@ -106,7 +106,8 @@ useLayoutEffect(() => {
             return (
               <div
                 key={index}
-                className="flex flex-col flex-wrap w-1/6 h-[157px] bg-white border-[1px] border-[#E4E5E7] rounded"
+                className="cursor-pointer flex flex-col flex-wrap w-1/6 h-[157px] bg-white border-[1px] border-[#E4E5E7] rounded"
+                onClick={()=>navigate('brands')}
               >
                 <img
                   src={brand.image.url}
@@ -139,9 +140,9 @@ useLayoutEffect(() => {
           </span>
         </div>
         <div id="Products" className="flex flex-row flex-wrap w-full mt-[12px] gap-[8px]">
-            {dataProducts.map((product, index) => {
+            {dataProducts.sort(() => Math.random() - 0.5).map((product, index) => {
             return (
-                <div key={index} style={{width:productsWidth + 'px' }} className="flex flex-col h-[333px] justify-center align-center bg-white border-[1px] border-[#E4E5E7] rounded px-[9px]">
+                <div key={index} style={{width:productsWidth + 'px' }} className="cursor-pointer flex flex-col h-[333px] justify-center align-center bg-white border-[1px] border-[#E4E5E7] rounded px-[9px]" onClick={()=>navigate('products')}>
                 <div className="flex flex-col h-[184px] p-[8px] w-full">
                 <img
                 className={(product.vipPriceFlag && product.bulkDiscountFlag) ? 'w-[104px] self-center mb-[6px]': (product.vipPriceFlag || product.bulkDiscountFlag) ? 'w-[120px] self-center mb-[10px]': ''}

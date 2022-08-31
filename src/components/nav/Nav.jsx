@@ -3,9 +3,10 @@ import { AiOutlinePhone } from "react-icons/ai";
 import SGflag from "../../assets/vectors/singaporeflag.png";
 import Eezeelogo from "../../assets/vectors/eezeelogo.png";
 import Carticon from "../../assets/vectors/carticon.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Nav() {
+  let navigate = useNavigate();
   return (
     <section id="Nav">
       <div className="flex w-full h-[38px] bg-[#EFEFF0] items-center">
@@ -32,7 +33,7 @@ function Nav() {
       </div>
       <div className="flex flex-wrap w-full h-[119px] border-b-[1px] border-[#D7D8DB] bg-[#FFFFFF]">
         <div className="flex flex-row w-full h-[80px] justify-between items-center mx-[120px]">
-          <img src={Eezeelogo} className="w-[150px] h-[44px]" alt={''} />
+          <img src={Eezeelogo} className="w-[150px] h-[44px]" alt={''} onClick={()=>{navigate('/')}} />
           <div className="flex flex-col w-[40px] h-[60px] self-start items-center justify-center">
             <div className="relative h-[40px] w-[40px] mt-[14px]">
               <span className="absolute top-0 right-[-8px] w-[20px] h-[20px] rounded-[22px] bg-[#2A64DB] font-normal text-[12px] leading-[20px] text-[#FFFFFF] text-center top-[6px] font-roboto">
