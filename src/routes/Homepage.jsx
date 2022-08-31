@@ -145,7 +145,7 @@ useLayoutEffect(() => {
                 <div key={index} style={{width:productsWidth + 'px' }} className="cursor-pointer flex flex-col h-[333px] justify-center align-center bg-white border-[1px] border-[#E4E5E7] rounded px-[9px]" onClick={()=>navigate('products')}>
                 <div className="flex flex-col h-[184px] p-[8px] w-full">
                 <img
-                className={(product.vipPriceFlag && product.bulkDiscountFlag) ? 'w-[104px] self-center mb-[6px]': (product.vipPriceFlag || product.bulkDiscountFlag) ? 'w-[120px] self-center mb-[10px]': ''}
+                className={'' + (product.vipPriceFlag && product.bulkDiscountFlag) ? 'w-[104px] self-center mb-[6px]': (product.vipPriceFlag || product.bulkDiscountFlag) ? 'w-[120px] self-center mb-[10px]': ''}
                   src={product.images[0].url}
                   alt={JSON.stringify(product.metadata)}
                 />

@@ -2,9 +2,11 @@ import React, {useLayoutEffect, useState} from 'react'
 
 import dataBrands from "../assets/datasets/brands.json"
 import noImage from '../assets/vectors/noimage.png'
+import {useNavigate} from "react-router-dom"
 
 function Brands() {
   const [brandsWidth, setBrandsWidth] = useState(0);
+  let navigate = useNavigate();
   // show all alphabets
   // const alphabets = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','S','T','U','V','W','X','Y','Z']
   const alphabets = ['A','B','C','D','E','H','I','L','M','N','S','T','V','W']
@@ -45,7 +47,8 @@ useLayoutEffect(() => {
               <div
                 key={index}
                 style={{width: brandsWidth + 'px'}}
-                className="flex flex-col flex-wrap h-[157px] bg-white border-[1px] border-[#E4E5E7] rounded"
+                className="cursor-pointer flex flex-col flex-wrap h-[157px] bg-white border-[1px] border-[#E4E5E7] rounded"
+                onClick={()=>navigate('/products')}
               >
                 <img
                   src={(brand.image && brand.image.url)? brand.image.url : noImage}
