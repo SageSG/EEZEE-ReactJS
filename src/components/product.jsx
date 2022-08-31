@@ -67,7 +67,8 @@ function ProductPage() {
         </div>
         </div>
         <div className='flex flex-wrap content-start w-1/3 h-[250px] bg-white mt-[24px] py-[16px] mx-[16px] px-[24px] border-[1px] border-[#E4E5E7] rounded self-start'>
-            <div className='flex w-full h-fit'><span className='self-start font-roboto font-bold text-[20px] leading-[28px] text-[#2A64DB] tracking-[0.3px]'>{productDetails.currencySymbol}</span><span className='font-roboto font-medium text-[#2A64DB] text-[30px] leading-[38px]'>{((productDetails.lowPrice+productDetails.highPrice)/2).toFixed(2)}</span></div>
+            <div className='flex w-full h-fit'><span className='self-start font-roboto font-bold text-[20px] leading-[28px] text-[#2A64DB] tracking-[0.3px]'>{productDetails.currencySymbol}</span><span className='font-roboto font-medium text-[#2A64DB] text-[30px] leading-[38px]'>{productDetails.lowPrice && productDetails.lowPrice.toFixed(2)}</span> {productDetails.highPrice ? <span className="mx-[4px]">–</span> : null}<span className='self-start font-roboto font-bold text-[20px] leading-[28px] text-[#2A64DB] tracking-[0.3px]'>{productDetails.currencySymbol}</span><span className='font-roboto font-medium text-[#2A64DB] text-[30px] leading-[38px]'>{productDetails.highPrice && productDetails.highPrice.toFixed(2)}</span>
+            </div>
             <hr className='items-start h-auto w-full border-dashed border-b-[1px] border-[#E4E5E7] shadow-price-quote'/>
             <div className='flex flex-row flex-nowrap w-full my-[24px] h-[32px]'>
                 <div className='flex font-roboto font-bold text-[14px] text-[#55585D] leading-[22px] self-center'>Quantity:</div>

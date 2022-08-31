@@ -162,7 +162,7 @@ useLayoutEffect(() => {
                     {product.highPriceOriginalPretty}
                   </div>}
                   <div className="flex items-stretch text-[16px] leading-[20px] text-[#2A64DB] font-roboto font-bold">
-                  <span className="text-[10px] leading-[12px] top-0 self-start">{product.currencySymbol}</span> <span>{product.lowPrice && product.lowPrice.toFixed(2)}</span> <span className="mx-[4px]">–</span> <span className="text-[10px] leading-[12px] top-0 self-start">{product.currencySymbol}</span><span>{product.highPrice && product.highPrice.toFixed(2)}</span>
+                  <span className="text-[10px] leading-[12px] top-0 self-start">{product.currencySymbol}</span> <span>{product.lowPrice && product.lowPrice.toFixed(2)}</span> {product.highPrice ? <span className="mx-[4px]">–</span> : null} <span className="text-[10px] leading-[12px] top-0 self-start">{product.highPrice && product.currencySymbol}</span><span>{product.highPrice && product.highPrice.toFixed(2)}</span>
                   </div>
                   <div className="mt-[10px] font-roboto font-normal text-[#242528] text-[14px] leading-[16px]">
                     {product.title}
