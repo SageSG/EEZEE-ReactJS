@@ -9,7 +9,7 @@ function Products() {
   const [productsWidth, setProductsWidth] = useState(0);
 
   function resizeProductsBox(){
-    setProductsWidth((document.getElementById("AllProducts").offsetWidth-33)/5)
+    setProductsWidth(Math.floor((document.getElementById("AllProducts").offsetWidth-48)/5))
 }
 
   // Resize the width if the window is changed
@@ -39,15 +39,15 @@ function arrangeProducts(option){
         <span className='font-roboto font-normal text-[14px] leading-[22px] text-[#868A92]'>10 results</span>
         </div>
       <div className='flex flex-row flex-wrap w-5/6 h-full mt-[24px]'>
-        <span className='font-roboto font-normal text-[14px] leading-[22px] text-[#868A92] w-full'>Page 1 of about 10 results</span>
+        <span className='font-roboto font-normal text-[14px] leading-[22px] text-[#868A92] w-full'>Page 1 of 1 about 10 results</span>
         <div className='flex flex-row flex-nowrap w-fit h-[32px] bg-white items-center font-roboto font-normal text-[12px] leading-[20px] mt-[8px]'>
           <div className='flex border-[1px] border-[#D9D9D9] rounded-l-sm py-[6px] px-[16px]' style={selectedTab === 0 ? {borderColor: '#2A64DB', color: '#2A64DB', backgroundColor: '#EEF3FC'}:{}} onClick={()=>{setSelectedTab(0)}}>Relevance</div>
           <div className='flex border-[1px] border-[#D9D9D9] rounded-sm py-[6px] px-[16px]' style={selectedTab === 1 ? {borderColor: '#2A64DB', color: '#2A64DB', backgroundColor: '#EEF3FC'}:{}}  onClick={()=>{setSelectedTab(1)}}>Price: High to Low</div>
           <div className='flex border-[1px] border-[#D9D9D9] rounded-r-sm py-[6px] px-[16px]' style={selectedTab === 2 ? {borderColor: '#2A64DB', color: '#2A64DB', backgroundColor: '#EEF3FC'}:{}} onClick={()=>{setSelectedTab(2)}}>Price: Low to High</div>
         </div>
 
-      <div id='AllProducts' className='flex w-full flex-wrap mt-[16px]'>
-        <div className='flex flex-row flex-wrap w-full gap-[8px]'>
+      <div className='flex w-full flex-wrap mt-[16px]'>
+        <div id='AllProducts' className='flex flex-row flex-wrap w-full gap-[8px]'>
         {arrangeProducts(selectedTab).map((product, index) => {
             return (
                 <div key={index} style={{width:productsWidth + 'px' }} className="cursor-pointer flex flex-col h-[333px] justify-center align-center bg-white border-[1px] border-[#E4E5E7] rounded px-[9px]" onClick={()=>navigate('products')}>
@@ -79,6 +79,7 @@ function arrangeProducts(option){
               </div>
             );
           })}
+              {console.log(productsWidth)}
           
         </div>
         </div>
