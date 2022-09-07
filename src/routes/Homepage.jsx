@@ -61,10 +61,10 @@ function Homepage() {
           <div className="absolute left-[63px] top-[100px] text-[#1E4DAF] font-normal text-[28px] leading-[32px]">
             Punchout integration with all major
           </div>
-          <div className="absolute left-[63px] top-[144px] text-[#1E4DAF] font-bold text-[36px] font-roboto leading-[54px]">
+          <div className="absolute left-[63px] top-[144px] text-[#1E4DAF] font-bold text-[36px] font-type1 leading-[54px]">
             ERPs & eProcurement Solutions
           </div>
-          <button className="absolute left-[63px] top-[219px] bg-[#1E4DAF] rounded-3xl text-white font-roboto font-bold text-[24px] leading-[28px] tracking-[0.5px] py-[10px] px-[32px]">
+          <button className="absolute left-[63px] top-[219px] bg-[#1E4DAF] rounded-3xl text-white font-type1 font-bold text-[24px] leading-[28px] tracking-[0.5px] py-[10px] px-[32px]">
             Learn More
           </button>
 
@@ -93,15 +93,15 @@ function Homepage() {
       </div>
 
       <section id="featurebrands" className="w-full mt-[40px]">
-        <div className="self-start font-roboto font-bold text-[20px] leading-[28px] tracking-[0.3px]">
+        <div className="self-start font-type1 font-bold text-[20px] leading-[28px] tracking-[0.3px]">
           Feature Brands
         </div>
         <div className="flex flex-row justify-between">
-          <p className="text-[#55585D] text-[14px] leading-[16px] font-roboto font-normal">
+          <p className="text-[#55585D] text-[14px] leading-[16px] font-type1 font-normal">
             Browse the full catalog of brands today
           </p>
           <span
-            className="flex font-roboto font-normal text-[#2A64DB] text-[14px] leading-[22px]"
+            className="flex font-type1 font-normal text-[#2A64DB] text-[14px] leading-[22px]"
             onClick={() => navigate("brands")}
           >
             View More{" "}
@@ -121,10 +121,10 @@ function Homepage() {
                   className="flex h-3/5 w-full object-contain"
                   alt={""}
                 />
-                <div className="flex h-1/5 w-full justify-center pt-[8px] text-[16px] leading-[20px] font-bold font-roboto text-[#242528]">
+                <div className="flex h-1/5 w-full justify-center pt-[8px] text-[16px] leading-[20px] font-bold font-type1 text-[#242528]">
                   {brand.name}
                 </div>
-                <div className="flex h-1/5 w-full justify-center text-[12px] leading-[20px] font-normal font-roboto text-[#55585D]">
+                <div className="flex h-1/5 w-full justify-center text-[12px] leading-[20px] font-normal font-type1 text-[#55585D]">
                   {brand.productCount + " Products"}
                 </div>
               </div>
@@ -134,15 +134,15 @@ function Homepage() {
       </section>
 
       <section id="ourproducts" className="w-full mt-[40px]">
-        <div className="self-start font-roboto font-bold text-[20px] leading-[28px] tracking-[0.3px]">
+        <div className="self-start font-type1 font-bold text-[20px] leading-[28px] tracking-[0.3px]">
           Our Products
         </div>
         <div className="flex flex-row justify-between">
-          <p className="text-[#55585D] text-[14px] leading-[16px] font-roboto font-normal">
+          <p className="text-[#55585D] text-[14px] leading-[16px] font-type1 font-normal">
             Trusted by the best companies in Asia
           </p>
           <span
-            className="flex font-roboto font-normal text-[#2A64DB] text-[14px] leading-[22px]"
+            className="flex font-type1 font-normal text-[#2A64DB] text-[14px] leading-[22px]"
             onClick={() => navigate("products")}
           >
             View More{" "}
@@ -177,21 +177,21 @@ function Homepage() {
                     />
                     {product.vipPriceFlag && (
                       <div className="flex h-fit w-fit bg-[#DBE5FA] px-[4px] rounded-sm">
-                        <span className="font-roboto font-bold text-[12px] leading-[20px] text-[#1E4DAF]">
+                        <span className="font-type1 font-bold text-[12px] leading-[20px] text-[#1E4DAF]">
                           VIP Price
                         </span>
                       </div>
                     )}
                     {product.bulkDiscountFlag && (
                       <div className="flex h-fit w-fit bg-[#FFE69C] px-[4px] rounded-sm">
-                        <span className="font-roboto font-bold text-[12px] leading-[20px] text-[#6A5001]">
+                        <span className="font-type1 font-bold text-[12px] leading-[20px] text-[#6A5001]">
                           Bulk Discount
                         </span>
                       </div>
                     )}
                     {(product.vipPriceFlag || product.bulkDiscountFlag) && (
                       <div className="flex h-fit w-fit bg-[#EFEFF0] px-[4px] rounded-sm">
-                        <span className="font-roboto font-bold text-[12px] leading-[20px] text-[#242528]">
+                        <span className="font-type1 font-bold text-[12px] leading-[20px] text-[#242528]">
                           MOQ: {product.moq}
                         </span>
                       </div>
@@ -200,11 +200,11 @@ function Homepage() {
 
                   <div className="flex flex-col flex-nowrap w-full h-[140px] mt-[8px]">
                     {product.highPriceOriginal && (
-                      <div className="text-[12px] leading-[20px] text-[#868A92] font-roboto font-normal line-through">
+                      <div className="text-[12px] leading-[20px] text-[#868A92] font-type1 font-normal line-through">
                         {product.highPriceOriginalPretty}
                       </div>
                     )}
-                    <div className="flex items-stretch text-[16px] leading-[20px] text-[#2A64DB] font-roboto font-bold">
+                    <div className="flex items-stretch text-[16px] leading-[20px] text-[#2A64DB] font-type1 font-bold">
                       <span className="text-[10px] leading-[12px] top-0 self-start">
                         {product.currencySymbol}
                       </span>{" "}
@@ -221,7 +221,7 @@ function Homepage() {
                         {product.highPrice && product.highPrice.toFixed(2)}
                       </span>
                     </div>
-                    <div className="mt-[10px] font-roboto font-normal text-[#242528] text-[14px] leading-[16px]">
+                    <div className="mt-[10px] font-type1 font-normal text-[#242528] text-[14px] leading-[16px]">
                       {product.title}
                     </div>
                   </div>
