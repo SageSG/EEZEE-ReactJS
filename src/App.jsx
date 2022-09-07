@@ -8,13 +8,14 @@ import {Routes,
     import Nav from './components/nav/Nav';
     import ProductPage from './components/product';
 import Footer from './components/footer/Footer';
+import Login from './routes/Login';
 
 function App() {
   return (
     <>
     <Nav/>
       <Routes>
-        <Route exact path="/" element = {<Homepage/>}/>
+        <Route exact path="/" element = {<Login/>}/>
         <Route exact path="brands" element = {<Brands/>}/>
         <Route exact path="products" element = {<Products/>}/>
         <Route exact path="products/:productid" element = {<ProductPage/>}/>

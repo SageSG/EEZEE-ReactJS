@@ -1,0 +1,60 @@
+import React, { useState } from "react";
+import { IoPersonCircleOutline } from "react-icons/io5";
+import { MdAlternateEmail } from "react-icons/md";
+import {BsShieldLockFill} from "react-icons/bs";
+
+function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  function handleEmailChange(event) {
+    setEmail(event.target.value);
+  }
+  function handlePasswordChange(event) {
+    setPassword(event.target.value);
+  }
+  return (
+    <main>
+      <div className="flex flex-col items-center justify-center h-screen bg-g2">
+        <div className="flex flex-col items-center w-96 h-96 p-2 bg-w2 rounded-lg">
+          <span className="flex w-16 h-16 bg-b1 rounded-full items-center justify-center">
+            <IoPersonCircleOutline className="text-w1" size="100" />
+          </span>
+          <div className="flex flex-nowrap w-full justify-center mt-4">
+            <span className="self-center w-1/5 h-[40px] bg-b1 rounded-l-lg">
+            <div className="flex w-full h-full content-center justify-center">
+              <MdAlternateEmail className="self-center text-w1" />
+              </div>
+            </span>
+            <input
+              className="flex w-4/5 h-[40px] font-type1 font-normal text-[12px] leading-[20px] text-center self-center rounded-r-lg border-[1px] border-[#2A64DB]"
+              type="text"
+              placeholder="Email ID"
+              value={email}
+              onChange={handleEmailChange}
+            />
+          </div>
+          <div className="flex flex-nowrap w-full justify-center mt-4">
+            <span className="self-center w-1/5 h-[40px] bg-b1 rounded-l-lg">
+                <div className="flex w-full h-full content-center justify-center">
+                <BsShieldLockFill className="self-center text-w1" />
+
+                </div>
+            </span>
+            <input
+              className="flex w-4/5 h-[40px] font-type1 font-normal text-[12px] leading-[20px] text-center self-center rounded-r-lg border-[1px] border-[#2A64DB]"
+              type="password"
+            placeholder="Password"
+            value={password}
+            onChange={handlePasswordChange}
+            />
+          </div>
+          <button className="mt-4 p-2 w-full rounded bg-g2 text-w1 font-bold">Sign up</button>
+          <button className="mt-4 p-2 w-full rounded bg-g2 text-w1 font-bold">Login with Google</button>
+          <button className="mt-4 p-2 w-full rounded bg-g2 text-w1 font-bold">Login with Facebook</button>
+        </div>
+      </div>
+    </main>
+  );
+}
+
+export default Login;
