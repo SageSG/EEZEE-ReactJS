@@ -49,7 +49,7 @@ function Footer() {
         <div className="flex-none w-1/3 order-2 grow-0 text-w1 space-y-4 self-center">
         <div className="flex-none justify-center text-w1 text-center">
           <b>Purpose & Mission</b>
-        <div className="flex justify-center text-w1 text-center text-[12px] mt-2">
+        <div className="flex justify-center text-w1 text-center text-[12px] mt-2 px-4">
             At Learn4Fund, we are dedicated to providing you with the best
             possible service. We are committed to protecting your privacy and
             security. We will only use the information we collect about you

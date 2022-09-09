@@ -9,6 +9,7 @@ import {Routes,
     import ProductPage from './components/product';
 import Footer from './components/footer/Footer';
 import Login from './routes/Login';
+import Signup from './routes/Signup';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route exact path="/" element = {<Login/>}/>
         <Route exact path="brands" element = {<Brands/>}/>
+        <Route exact path="signup" element = {<Signup/>}/>
         <Route exact path="products" element = {<Products/>}/>
         <Route exact path="products/:productid" element = {<ProductPage/>}/>
 

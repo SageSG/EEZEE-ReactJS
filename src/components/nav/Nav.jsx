@@ -37,12 +37,12 @@ function Nav() {
           <div className="flex flex-row flex-wrap w-[120px] h-[22px] ml-[32px]">
             <AiOutlinePhone className="w-[18px] h-[18px] mr-[8px] text-[#55585D] self-center" />
             <p className="w-[94px] h-[22px] text-[14px] font-normal leading-[22px] text-[#55585D] font-roboto">
-              +65 6797 9688
+              +65 9797 9797
             </p>
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap w-full h-[119px] border-b-[1px] border-[#D7D8DB] bg-[#FFFFFF]">
+      {/* <div className="flex flex-wrap w-full h-[119px] border-b-[1px] border-[#D7D8DB] bg-[#FFFFFF]">
         <div className="flex flex-row w-full h-[80px] justify-between items-center mx-[120px]">
           <img
             src={Eezeelogo}
@@ -77,7 +77,7 @@ function Nav() {
             View All Brands
           </Link>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
