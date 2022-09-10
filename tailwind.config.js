@@ -18,9 +18,10 @@ module.exports = {
         'b2': '#1f1f38',
         'g1': '#3B3E48',
         'g2': '#494F5C',
-        'g3': '#EFEFF0',
+        'g3': '#5A6270',
         'w1': '#FFFFFF',
         'w2': '#F8F8F8',
+        'success': '#00B87C',
     }
   },
   },
