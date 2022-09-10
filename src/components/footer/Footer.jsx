@@ -18,7 +18,7 @@ function Footer() {
           </div>
         
           <div className="flex justify-center text-w1 text-center px-8">
-          The Titans community has raised over SGD$1,000,000 and donated course to the underpriviledged in Singapore since 2019.
+          The Titans community has raised over SGD$1,000,000 and donated courses to the underpriviledged in Singapore since 2019.
           </div>
           
           

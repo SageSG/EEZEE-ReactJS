@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Signup() {
   const [newUser, setNewUser] = useState({id:null});
-  const [passwordStrength, setPasswordStrength] = useState(0);
+  const [passwordStrength, setPasswordStrength] = useState(60);
 
   
   return (
@@ -41,8 +41,11 @@ function Signup() {
                         <span className="flex-none font-type1 order-1 w-1/2 text-center bg-g1 h-full text-w1 rounded-l py-2">Confirm Password</span>
                         <input className="flex-none w-1/2 h-full order-2 border-2 border-g3 rounded-r text-center" type="password" placeholder="*************"/>
                     </div>
-                    <div className="flex pl-2 my-2">
-                        <span className="flex-none order-1 w-full text-center bg-success border-1 border-g3 text-w2 h-full rounded py-2">Strength : 80%</span>
+                    <div className="flex flex-col flex-wrap ml-2 my-2">
+                        <div className="flex w-full">password strength: {passwordStrength}%</div>
+                        <div className="flex w-full border-2 border-g2">
+                        <span className="flex-none text-center  h-full py-[6px] bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 ease-in" style={{width: passwordStrength+'%'}}></span>
+                    </div>
                     </div>
             </div>
             <div className="flex flex-row flex-wrap w-full bg-white rounded p-2 my-2">
