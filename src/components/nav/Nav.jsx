@@ -3,6 +3,7 @@ import { AiOutlinePhone } from "react-icons/ai";
 import SGflag from "../../assets/vectors/singaporeflag.png";
 import Eezeelogo from "../../assets/vectors/eezeelogo.png";
 import Carticon from "../../assets/vectors/carticon.png";
+import { BsSearch } from "react-icons/bs";
 import {BsCart} from "react-icons/bs";
 import {RiLogoutBoxRLine} from "react-icons/ri";
 import { Link, useNavigate } from "react-router-dom";
@@ -22,10 +23,17 @@ function Nav() {
   }, []);
   return (
     <section id="Nav">
-      <div className="flex flex-row flex-wrap w-full bg-b1 px-[120px] text-w1">
-      <span className="font-type4 mt-2 text-[32px]">Learn4Fund</span>
+      <div className="flex flex-row flex-wrap w-full bg-b2 px-[120px] text-w1 shadow-lg">
+      <div className="flex flex-row flex-wrap w-full justify-between mb-2">
+      <div className="flex w-1/2 font-type4 mt-2 text-[32px]">
+      Learn4Fund
+        </div>
+        <div className="flex w-1/2 h-full items-center justify-end">
+          <BsSearch className="self-center"/><input className="flex w-1/3 h-1/2 bg-b1 text-w2 p-2 ml-2 rounded-lg text-center" placeholder="Search for courses"/>
+        </div>
+        </div>
       
-      <div className="flex flex-col w-full bg-b1 items-center my-2">
+      <div className="flex flex-col w-full items-center my-2">
       <div className="flex flex-row flex-wrap w-full justify-between mb-2">
       <div className="flex w-1/2">
         <span className="font-type1 text-[24px]">Hi, User</span>

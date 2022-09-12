@@ -10,13 +10,14 @@ import {Routes,
 import Footer from './components/footer/Footer';
 import Login from './routes/Login';
 import Signup from './routes/Signup';
+import Toc from './routes/Toc';
 
 function App() {
   return (
     <>
     <Nav/>
       <Routes>
-        <Route exact path="/" element = {<Login/>}/>
+        <Route exact path="/" element = {<Toc/>}/>
         <Route exact path="brands" element = {<Brands/>}/>
         <Route exact path="login" element = {<Login/>}/>
         <Route exact path="signup" element = {<Signup/>}/>
