@@ -3,15 +3,15 @@ import { BsDiscord, BsLinkedin, BsTelegram } from "react-icons/bs";
 import {BiDonateHeart} from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
 import {HiOutlineMailOpen} from "react-icons/hi";
-import logo from "../../assets/vectors/logo.png";
+import logo from "../../assets/vectors/networking.png";
 
 function Footer() {
   return (
     <footer id="Footer">
-      <div className="flex flex-row flex-wrap bg-b2">
+      <div className="flex flex-row flex-wrap bg-b2 py-4">
         <div className="flex-none w-1/3 order-none grow-0 space-y-4 self-center">
         <div className="flex flex-row w-full text-w1 justify-center hover:text-[cyan]">
-            <HiOutlineMailOpen className="self-center mr-4"/><u>Subscribe to Newsletter for more deals</u>
+            <HiOutlineMailOpen className="self-center    mr-4"/><u>Subscribe to Newsletter for more deals</u>
           </div>
         <div className="flex flex-row w-full text-w1 justify-center">
             <button className="flex bg-b1 p-4 rounded-lg hover:text-[red] hover:bg-w1"><BiDonateHeart className="self-center mr-4"/>Make a Donation</button>
@@ -23,9 +23,14 @@ function Footer() {
           
           
         </div>
-        <div className="flex flex-wrap w-1/3 order-1 grow-0 justify-center">
-          <img src={logo}/>
-          <div className="flex flex-row w-full justify-center p-2 gap-2 text-white bg-b2">
+        <div className="flex flex-wrap w-1/3 align-center order-1 grow-0 justify-center">
+          <div className="flex flex-col w-full h-3/4 justify-center items-center">
+          <img src={logo} className="flex h-[50px] stroke-w1 self-center" alt="Teamwork icons created by Becris - Flaticon"/>
+
+            <span className="text-w1 font-type4 mt-2">Learn4Fund</span>
+            <span className="text-w1 font-type5">Titans</span>
+          </div>
+          <div className="flex flex-row w-full justify-center p-2 gap-2 text-white bg-b2 self-center">
         <a
           href="#"
           className="hover:text-[cyan]"

@@ -23,13 +23,13 @@ function Login() {
             <IoPersonCircleOutline className="text-w1" size="100" />
           </span>
           <div className="flex flex-nowrap w-full justify-center mt-4">
-            <span className="self-center w-1/5 h-[40px] bg-b1 rounded-l-lg">
+            <span className="self-center w-1/4 h-[40px] bg-b1 rounded-l">
             <div className="flex w-full h-full content-center justify-center">
               <MdAlternateEmail className="self-center text-w1" />
               </div>
             </span>
             <input
-              className="flex w-4/5 h-[40px] font-type1 font-normal text-[12px] leading-[20px] text-center self-center rounded-r-lg border-[1px] border-[#2A64DB]"
+              className="flex w-3/4 h-[40px] font-type1 font-normal leading-[20px] text-center self-center rounded-r border-2 border-b1"
               type="text"
               placeholder="Email ID"
               value={email}
@@ -37,14 +37,14 @@ function Login() {
             />
           </div>
           <div className="flex flex-nowrap w-full justify-center mt-4">
-            <span className="self-center w-1/5 h-[40px] bg-b1 rounded-l-lg">
+            <span className="self-center w-1/4 h-[40px] bg-b1 rounded-l">
                 <div className="flex w-full h-full content-center justify-center">
                 <BsShieldLockFill className="self-center text-w1" />
 
                 </div>
             </span>
             <input
-              className="flex w-4/5 h-[40px] font-type1 font-normal text-[12px] leading-[20px] text-center self-center rounded-r-lg border-[1px] border-[#2A64DB]"
+              className="flex w-3/4 h-[40px] font-type1 font-normal leading-[20px] text-center self-center rounded-r border-2 border-b1"
               type="password"
             placeholder="Password"
             value={password}

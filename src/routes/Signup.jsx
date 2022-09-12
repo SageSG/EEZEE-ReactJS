@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Signup() {
   const [newUser, setNewUser] = useState({id:null});
-  const [passwordStrength, setPasswordStrength] = useState(60);
+  const [passwordStrength, setPasswordStrength] = useState(100);
 
   
   return (
@@ -14,7 +14,7 @@ function Signup() {
             Register an account with us
           </span>
           <div className="flex flex-wrap w-full justify-center mt-4">
-            <div className="flex  w-1/2">
+            <div className="flex w-1/2">
                 <div className="flex flex-col w-full">
                     <div className="flex pr-2 my-2">
                         <span className="flex-none font-type1 order-1 w-1/3 text-center bg-g1 h-full text-w1 rounded-l py-2">First Name</span>
