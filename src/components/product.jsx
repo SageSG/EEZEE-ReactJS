@@ -12,7 +12,7 @@ import { useParams, useNavigate } from "react-router-dom";
 function ProductPage() {
   const parse = require("html-react-parser");
   const [quantitySelected, setQuantitySelected] = useState(0);
-  const [stars, setStars] = useState([0,0,0,0,0])
+  const [stars, setStars] = useState(0)
   const { productid } = useParams();
   let navigate = useNavigate();
 
@@ -43,11 +43,7 @@ function ProductPage() {
 
   // store stars
   function highlightStars(number){
-    let tempStars = [0,0,0,0,0]
-    for (let i = 0; i < number; i++){
-      tempStars[i] = 1;
-    }
-    setStars(tempStars)
+    setStars(number)
   }
 
   return (
@@ -212,26 +208,31 @@ function ProductPage() {
         
           <div className="flex-row flex-wrap w-full my-2">
         <div className="flex w-full justify-between text-[14px]">
-          <div className="font-type1 font-bold text-[16px]">John</div>
-          <div>14/9/2022</div>
+          <div className="flex flex-nowrap font-type1 font-bold text-[16px]">
+            John
+        [3 <AiFillStar className="self-center text-yellow-500"/>]
         </div>
-        <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."</p>
+          <div>14/9</div>
+        </div>
+        <p>"I love this course"</p>
         </div>
         <div className="flex-row flex-wrap w-full my-2">
         <div className="flex w-full justify-between text-[14px]">
-          <div className="font-type1 font-bold text-[16px]">Samantha</div>
-          <div>14/9/2022</div>
+          <div className="flex flex-nowrap font-type1 font-bold text-[16px]">Samantha
+        [4 <AiFillStar className="self-center text-yellow-500"/>]
+          </div>
+          <div>14/9</div>
         </div>
         <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."</p>
         </div>
         <div className="flex flex-row flex-wrap w-full h-auto my-4">
         <span className="font-type1 text-[20px] font-semibold">My review</span>
         <div className="flex flex-nowrap ml-4">
-        <AiOutlineStar className="self-center" style={stars[0]==1? {color: 'gold'}:{color: 'black'}} onClick={()=>{highlightStars(1)}}/>
-        <AiOutlineStar className="self-center" style={stars[1]==1? {color: 'gold'}:{color: 'black'}} onClick={()=>{highlightStars(2)}}/>
-        <AiOutlineStar className="self-center" style={stars[2]==1? {color: 'gold'}:{color: 'black'}} onClick={()=>{highlightStars(3)}}/>
-        <AiOutlineStar className="self-center" style={stars[3]==1? {color: 'gold'}:{color: 'black'}} onClick={()=>{highlightStars(4)}}/>
-        <AiOutlineStar className="self-center" style={stars[4]==1? {color: 'gold'}:{color: 'black'}} onClick={()=>{highlightStars(5)}}/>
+        <AiOutlineStar className="self-center" style={stars>=1? {color: 'gold'}:{color: 'black'}} onClick={()=>{highlightStars(1)}}/>
+        <AiOutlineStar className="self-center" style={stars>=2? {color: 'gold'}:{color: 'black'}} onClick={()=>{highlightStars(2)}}/>
+        <AiOutlineStar className="self-center" style={stars>=3? {color: 'gold'}:{color: 'black'}} onClick={()=>{highlightStars(3)}}/>
+        <AiOutlineStar className="self-center" style={stars>=4? {color: 'gold'}:{color: 'black'}} onClick={()=>{highlightStars(4)}}/>
+        <AiOutlineStar className="self-center" style={stars>=5? {color: 'gold'}:{color: 'black'}} onClick={()=>{highlightStars(5)}}/>
         </div>
         <textarea className="flex w-full h-[80px] border-2 border-b2 rounded text-start my-2"/>
         <button className="bg-g2 text-w1 p-2 rounded">Submit review</button>
