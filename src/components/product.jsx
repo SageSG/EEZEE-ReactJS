@@ -207,7 +207,22 @@ function ProductPage() {
 
       <div className="flex flex-row flex-wrap w-full h-auto bg-white mt-[24px] mx-[16px] p-[24px]">
       <div className="flex w-full h-fit border-b-[2px] border-b3 shadow-price-quote">
-        <span className="font-type1 text-[24px] text-b3 font-bold">Customer Review - 4.5/5 </span><AiFillStar className="text-yellow-500 self-center" size={24}/>
+        <span className="font-type1 text-[24px] text-b3 font-bold">Customer Reviews - 4.5/5 </span><AiFillStar className="text-yellow-500 self-center" size={24}/>
+        </div>
+        
+          <div className="flex-row flex-wrap w-full my-2">
+        <div className="flex w-full justify-between text-[14px]">
+          <div className="font-type1 font-bold text-[16px]">John</div>
+          <div>14/9/2022</div>
+        </div>
+        <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."</p>
+        </div>
+        <div className="flex-row flex-wrap w-full my-2">
+        <div className="flex w-full justify-between text-[14px]">
+          <div className="font-type1 font-bold text-[16px]">Samantha</div>
+          <div>14/9/2022</div>
+        </div>
+        <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."</p>
         </div>
         <div className="flex flex-row flex-wrap w-full h-auto my-4">
         <span className="font-type1 text-[20px] font-semibold">My review</span>
@@ -221,7 +236,6 @@ function ProductPage() {
         <textarea className="flex w-full h-[80px] border-2 border-b2 rounded text-start my-2"/>
         <button className="bg-g2 text-w1 p-2 rounded">Submit review</button>
           </div>
-        
       </div>
       </div>
       
