@@ -10,14 +10,17 @@ import {Routes,
 import Footer from './components/footer/Footer';
 import Login from './routes/Login';
 import Signup from './routes/Signup';
-import Toc from './routes/Toc';
+import Toc from './policies/Toc';
+import Privacy from './policies/Privacy';
+import Cookie from './policies/Cookie';
+import Cart from './routes/Cart';
 
 function App() {
   return (
     <>
     <Nav/>
       <Routes>
-        <Route exact path="/" element = {<Toc/>}/>
+        <Route exact path="/" element = {<Products/>}/>
         <Route exact path="brands" element = {<Brands/>}/>
         <Route exact path="login" element = {<Login/>}/>
         <Route exact path="signup" element = {<Signup/>}/>
