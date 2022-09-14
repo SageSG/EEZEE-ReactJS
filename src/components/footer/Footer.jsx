@@ -10,11 +10,11 @@ function Footer() {
     <footer id="Footer">
       <div className="flex flex-row flex-wrap bg-b2 py-4">
         <div className="flex-none w-1/3 order-none grow-0 space-y-4 self-center">
-        <div className="flex flex-row w-full text-w1 justify-center hover:text-[cyan]">
-            <HiOutlineMailOpen className="self-center    mr-4"/><u>Subscribe to Newsletter for more deals</u>
+        <div className="flex flex-row w-full justify-center footerlink">
+            <HiOutlineMailOpen className="self-center mr-4"/><u>Subscribe to Newsletter for more deals</u>
           </div>
         <div className="flex flex-row w-full text-w1 justify-center">
-            <button className="flex bg-b1 p-4 rounded-lg hover:text-[red] hover:bg-w1"><BiDonateHeart className="self-center mr-4"/>Make a Donation</button>
+            <button className="flex btn"><BiDonateHeart className="self-center mr-4"/>Make a Donation</button>
           </div>
         
           <div className="flex justify-center text-w1 text-center px-8">
@@ -30,7 +30,7 @@ function Footer() {
             <span className="text-w1 font-type4 mt-2">Learn4Fund</span>
             <span className="text-w1 font-type5">Titans</span>
           </div>
-          <div className="flex flex-row w-full justify-center p-2 gap-2 text-white bg-b2 self-center">
+          <div className="flex flex-row w-full justify-center p-2 gap-2 text-white self-center">
         <a
           href="#"
           className="hover:text-[cyan]"
@@ -63,13 +63,13 @@ function Footer() {
           </div>
             <div className="flex w-full text-[12px] text-center justify-evenly">
           <b>Terms and conditions</b>
-                <div className="hover:text-[cyan]"><span className="px-4">&#8226;</span>Terms of Service</div>
-                <div className="hover:text-[cyan]"><span className="px-4">&#8226;</span>Legal Notices</div>
+                <div className="link">Terms of Service</div>
+                <div className="link">Legal Notices</div>
           </div>
             <div className="flex w-full text-[12px] text-center justify-evenly">
             <b>User Policies</b>
-                <div className="hover:text-[cyan]"><span className="px-4">&#8226;</span>Privacy Policy</div>
-                <div className="hover:text-[cyan]"><span className="px-4">&#8226;</span>Cookie Policy</div>
+                <div className="link">Privacy Policy</div>
+                <div className="link">Cookie Policy</div>
           </div>
         </div>
       </div>

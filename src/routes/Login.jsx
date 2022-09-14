@@ -29,7 +29,7 @@ function Login() {
               </div>
             </span>
             <input
-              className="flex w-3/4 h-[40px] font-type1 font-normal leading-[20px] text-center self-center rounded-r border-2 border-b1"
+              className="flex w-3/4 h-[40px] input"
               type="text"
               placeholder="Email ID"
               value={email}
@@ -44,7 +44,7 @@ function Login() {
                 </div>
             </span>
             <input
-              className="flex w-3/4 h-[40px] font-type1 font-normal leading-[20px] text-center self-center rounded-r border-2 border-b1"
+              className="flex w-3/4 h-[40px] input"
               type="password"
             placeholder="Password"
             value={password}

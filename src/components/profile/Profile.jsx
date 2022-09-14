@@ -47,7 +47,7 @@ function profile() {
           </div>
         </div>
       </div>
-      <div className="flex-row flex-nowrap w-full space-y-2">
+      <div className="flex-row flex-nowrap w-full space-y-2 px-2">
         <div className="flex w-full justify-between">
         <div className="self-center">
           <b>Two Factor Authentication</b> (

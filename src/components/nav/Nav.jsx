@@ -79,7 +79,7 @@ function Nav() {
                 className="w-[32px] h-[32px] mr-[8px] bg-w1 self-center"
                 style={{ borderRadius: "100%" }}
               />
-              <span className="font-type2 text-[24px]">Hi, User</span>
+              <span className="font-type2 text-[24px]">Hi, John Doe</span>
             </div>
             <div className="flex w-1/2 justify-end">
               <Link to="/settings" className="cursor-pointer flex flex-row flex-wrap h-[22px] ml-[32px]">
