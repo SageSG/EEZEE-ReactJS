@@ -141,7 +141,7 @@ function ProductPage() {
             {productDetails.lowPrice && productDetails.lowPrice.toFixed(2)}
           </span>{" "}
           {productDetails.highPrice ? (
-            <span className="mx-[4px]">–</span>
+            <span className="self-center mx-[4px] text-[16px] leading-[20px] text-[#2A64DB] font-type1 font-bold">–</span>
           ) : null}
           <span className="self-start font-type1 font-bold text-[20px] leading-[28px] text-b3 tracking-[0.3px]">
             {productDetails.highPrice && productDetails.currencySymbol}

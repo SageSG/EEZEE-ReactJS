@@ -14,13 +14,15 @@ import Toc from './policies/Toc';
 import Privacy from './policies/Privacy';
 import Cookie from './policies/Cookie';
 import Cart from './routes/Cart';
+import Settings from './routes/Settings';
 
 function App() {
   return (
     <>
     <Nav/>
       <Routes>
-        <Route exact path="/" element = {<Products/>}/>
+        <Route exact path="/" element = {<Settings/>}/>
+        <Route exact path="settings" element = {<Settings/>}/>
         <Route exact path="brands" element = {<Brands/>}/>
         <Route exact path="login" element = {<Login/>}/>
         <Route exact path="signup" element = {<Signup/>}/>
