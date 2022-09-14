@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Routes,
     Route,
     Link} from "react-router-dom"
@@ -15,13 +15,23 @@ import Privacy from './policies/Privacy';
 import Cookie from './policies/Cookie';
 import Cart from './routes/Cart';
 import Settings from './routes/Settings';
+import Banner from './components/banner/Banner';
+import Donations from './routes/Donations';
+import Admin from './routes/Admin';
 
 function App() {
+  const [bannerClose, setBannerClose] = useState(false);
   return (
     <>
+    {!bannerClose && <Banner closeBanner={setBannerClose}/>}
     <Nav/>
       <Routes>
-        <Route exact path="/" element = {<Settings/>}/>
+        <Route exact path="/" element = {<Homepage/>}/>
+        <Route exact path="/admin" element = {<Admin/>}/>
+        <Route exact path="/donate" element = {<Donations/>}/>
+        <Route exact path="/tos" element = {<Toc/>}/>
+        <Route exact path="/privacy" element = {<Privacy/>}/>
+        <Route exact path="/cookies" element = {<Cookie/>}/>
         <Route exact path="settings" element = {<Settings/>}/>
         <Route exact path="brands" element = {<Brands/>}/>
         <Route exact path="login" element = {<Login/>}/>

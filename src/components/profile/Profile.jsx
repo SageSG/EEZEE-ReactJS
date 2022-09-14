@@ -36,6 +36,7 @@ function profile() {
         <div className="flex w-1/2 h-full justify-evenly">
           <img
             src={noimage}
+            alt={"avatar of user"}
             className="w-[100px] h-[100px] mr-[8px] bg-w1 self-center border-2"
             style={{ borderRadius: "100%" }}
           />

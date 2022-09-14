@@ -11,7 +11,7 @@ function Footer() {
       <div className="flex flex-row flex-wrap bg-b2 py-4">
         <div className="flex-none w-1/3 order-none grow-0 space-y-4 self-center">
         <div className="flex flex-row w-full justify-center footerlink">
-            <HiOutlineMailOpen className="self-center mr-4"/><u>Subscribe to Newsletter for more deals</u>
+            <HiOutlineMailOpen className="self-center mr-4"/><u>Subscribe to Newsletter</u>
           </div>
         <div className="flex flex-row w-full text-w1 justify-center">
             <button className="flex btn"><BiDonateHeart className="self-center mr-4"/>Make a Donation</button>
@@ -46,7 +46,7 @@ function Footer() {
         >
           <BsDiscord />
         </a>
-        <a href="#" className="hover:text-[cyan]">
+        <a href="https://github.com/ict3x03-Learn4Fund" className="hover:text-[cyan]">
           <FaGithub />
         </a>
       </div>
@@ -63,13 +63,12 @@ function Footer() {
           </div>
             <div className="flex w-full text-[12px] text-center justify-evenly">
           <b>Terms and conditions</b>
-                <div className="link">Terms of Service</div>
-                <div className="link">Legal Notices</div>
+                <a href="/tos" className="link">Terms of Service</a>
           </div>
             <div className="flex w-full text-[12px] text-center justify-evenly">
             <b>User Policies</b>
-                <div className="link">Privacy Policy</div>
-                <div className="link">Cookie Policy</div>
+                <a href="/privacy" className="link">Privacy Policy</a>
+                <a href="/cookies" className="link">Cookie Policy</a>
           </div>
         </div>
       </div>

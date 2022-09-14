@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { AiOutlinePhone } from "react-icons/ai";
 import SGflag from "../../assets/vectors/singaporeflag.png";
-import Carticon from "../../assets/vectors/carticon.png";
 import { BsSearch } from "react-icons/bs";
 import { BsCart } from "react-icons/bs";
-import { RiLogoutBoxRLine, RiUserSettingsFill } from "react-icons/ri";
+import { RiAdminLine, RiLogoutBoxRLine, RiUserSettingsFill } from "react-icons/ri";
 import { Link, useNavigate } from "react-router-dom";
 import { HiCurrencyDollar } from "react-icons/hi";
 import picture from "../../assets/images/default_person.jpg";
+import { BiDonateHeart } from "react-icons/bi";
 
 function Nav() {
   let navigate = useNavigate();
@@ -76,12 +76,27 @@ function Nav() {
             <div className="flex w-1/2">
               <img
                 src={picture}
+                alt={"user profile"}
                 className="w-[32px] h-[32px] mr-[8px] bg-w1 self-center"
                 style={{ borderRadius: "100%" }}
               />
               <span className="font-type2 text-[24px]">Hi, John Doe</span>
             </div>
             <div className="flex w-1/2 justify-end">
+            <Link to="/admin" className="cursor-pointer flex flex-row flex-wrap h-[22px] ml-[32px]">
+                <RiAdminLine className="w-[18px] h-[18px] mr-[8px] self-center text-w1" />
+                < span className=" h-[22px] font-normal leading-[22px] font-type1" >
+                  Settings
+                </span>
+                
+              </Link>
+            <Link to="/donate" className="cursor-pointer flex flex-row flex-wrap h-[22px] ml-[32px]">
+                <BiDonateHeart className="w-[18px] h-[18px] mr-[8px] self-center" />
+                < span className=" h-[22px] font-normal leading-[22px] font-type1" >
+                  Donate
+                </span>
+                
+              </Link>
               <Link to="/settings" className="cursor-pointer flex flex-row flex-wrap h-[22px] ml-[32px]">
                 <RiUserSettingsFill className="w-[18px] h-[18px] mr-[8px] self-center" />
                 < span className=" h-[22px] font-normal leading-[22px] font-type1" >

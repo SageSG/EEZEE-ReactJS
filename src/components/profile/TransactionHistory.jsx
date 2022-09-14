@@ -13,7 +13,7 @@ function TransactionHistory() {
 
       <div className="flex-row flex-nowrap w-full space-y-2 p-2">
         <div className="flex w-full justify-start">
-          No transaction history
+          No recent transaction history
         </div>
       </div>
     </div>
