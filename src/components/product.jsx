@@ -50,6 +50,7 @@ function ProductPage() {
     <main className="flex w-full h-full px-[120px] pb-[119px] bg-[#EFEFF0] items-center">
       <div className="flex flex-row flex-wrap w-2/3 h-auto mt-[24px] p-[16px] bg-white  self-start">
         <div className="flex flex-col w-full border-b-[1px]">
+
           <span className="font-type1 font-medium text-[24px] leading-[32px]">
             {productDetails.title}
           </span>
